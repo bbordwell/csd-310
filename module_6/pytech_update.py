@@ -1,6 +1,3 @@
-#Ben Bordwell Module 5.3 assignment 11/11/2021
-#This program displays all documents in the students collection.
-
 from pymongo import MongoClient
 
 url = "mongodb+srv://admin:admin@cluster0.ckvk8.mongodb.net/students?retryWrites=true&w=majority"
@@ -15,8 +12,10 @@ for doc in docs:
     print(f'Last Name: {doc["last_name"]}')
     print()
 
+result = db.students.update_one({"student_id": "1007"},{"$set": {"last_name": "Oakenshield II"}})
+
 student = db.students.find_one({"student_id":"1007"})
-print("-- DISPLAYING STUDENT DOCUMENT FROM find_one() QUERY --")
+print("-- DISPLAYING STUDENT DOCUMENT 1007 --")
 print(f'Student ID: {student["student_id"]}')
 print(f'First Name: {student["first_name"]}')
 print(f'Last Name: {student["last_name"]}')
