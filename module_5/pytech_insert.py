@@ -28,9 +28,9 @@ frodo = {
 
 print("-- INSERT STATEMENTS --")
 thorin_student_id = db.students.insert_one(thorin).inserted_id
-print(f"Inserted student record Thorin Oakenshield into the students colleciton with document_id {thorin_student_id}")
+print(f"Inserted student record Thorin Oakenshield into the students collection with document_id {thorin_student_id}")
 bilbo_student_id = db.students.insert_one(bilbo).inserted_id
-print(f"Inserted student record Bilbo Baggins into the students colleciton with document_id {bilbo_student_id}")
+print(f"Inserted student record Bilbo Baggins into the students collection with document_id {bilbo_student_id}")
 frodo_student_id = db.students.insert_one(frodo).inserted_id
-print(f"Inserted student record Frodo Baggins into the students colleciton with document_id {frodo_student_id}")
+print(f"Inserted student record Frodo Baggins into the students collection with document_id {frodo_student_id}")
 

@@ -1,3 +1,6 @@
+#Ben Bordwell Module 6.2 assignment. 11/16/2021
+#This program updates the last name of student 1007.
+
 from pymongo import MongoClient
 
 url = "mongodb+srv://admin:admin@cluster0.ckvk8.mongodb.net/students?retryWrites=true&w=majority"
