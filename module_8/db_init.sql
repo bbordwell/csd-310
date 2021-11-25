@@ -1,3 +1,5 @@
+-- Ben Bordwell CSD310 11/23/2021
+
 -- drop test user if exists
 DROP USER IF EXISTS 'pysports_user'@'localhost';
 
