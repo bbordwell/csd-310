@@ -202,7 +202,9 @@ cursor.execute("""INSERT INTO time_clock(ID, date_worked, worked)
         ((SELECT ID FROM employees WHERE first_name = 'R'), '2021-12-01', TRUE),
         ((SELECT ID FROM employees WHERE first_name = 'S'), '2021-12-01', TRUE),
         ((SELECT ID FROM employees WHERE first_name = 'T'), '2021-12-01', TRUE),
-        ((SELECT ID FROM employees WHERE first_name = 'Maria'), '2021-12-01', TRUE)
+        ((SELECT ID FROM employees WHERE first_name = 'Maria'), '2021-12-01', TRUE),
+        ((SELECT ID FROM employees WHERE first_name = 'Maria'), '2021-11-01', TRUE),
+        ((SELECT ID FROM employees WHERE first_name = 'A'), '2021-1-01', TRUE)
         ;""")
 db.commit()
 
@@ -218,7 +220,9 @@ cursor.execute("""INSERT INTO supplier_orders(supplier_name, bottle_qty, corks_q
     VALUES
         ((SELECT supplier_name FROM suppliers WHERE phone_number = '7075551234'), 2400, 2400, 0, 0, 0, 0, '2021-10-15', '2021-11-2'),
         ((SELECT supplier_name FROM suppliers WHERE phone_number = '7075559876'), 0, 0, 2400, 200, 0, 0, '2021-10-15', '2021-10-29'),
-        ((SELECT supplier_name FROM suppliers WHERE phone_number = '7075554567'), 0, 0, 0, 0, 2, 8, '2021-10-15', '2021-10-30');
+        ((SELECT supplier_name FROM suppliers WHERE phone_number = '7075559876'), 0, 0, 2400, 200, 0, 0, '2021-01-15', '2021-01-16'),
+        ((SELECT supplier_name FROM suppliers WHERE phone_number = '7075554567'), 0, 0, 0, 0, 2, 8, '2021-10-15', '2021-10-30'),
+        ((SELECT supplier_name FROM suppliers WHERE phone_number = '7075551234'), 2400, 2400, 0, 0, 0, 0, '2021-01-15', '2021-2-15');
         """)
 db.commit()
 
