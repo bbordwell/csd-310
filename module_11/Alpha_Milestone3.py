@@ -148,7 +148,8 @@ LEFT JOIN
   SUM(chardonnay_qty) AS chardonnay
   FROM distributor_orders
   GROUP BY distributor_name) totals
-ON totals.distributor_name = distributor_orders.distributor_name;
+ON totals.distributor_name = distributor_orders.distributor_name
+ORDER BY total DESC;
 """)
 response = cursor.fetchall()
 print("Total wine Sales by distributor:")
